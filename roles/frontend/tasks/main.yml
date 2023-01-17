@@ -36,9 +36,8 @@
 #    name: httpd
 #    state: installed
 
-- name: add user
-  user:
-    name: roboshop
+- name: This task will always make changes to the system
+  ansible.builtin.command: uptime
   register: out
   check_mode: no
   diff_mode: full
