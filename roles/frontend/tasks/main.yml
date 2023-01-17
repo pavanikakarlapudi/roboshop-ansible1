@@ -41,6 +41,7 @@
     name: roboshop
   register: out
   check_mode: no
+  diff_mode: none
 
 - name: out
   debug:
