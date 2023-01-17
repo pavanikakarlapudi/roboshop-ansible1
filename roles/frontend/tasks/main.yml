@@ -37,7 +37,7 @@
 #    state: installed
 
 - name: This task will always make changes to the system
-  ansible.builtin.command: uptime
+  ansible.builtin.shell: uptime
   register: out
   check_mode: no
   diff_mode: full
