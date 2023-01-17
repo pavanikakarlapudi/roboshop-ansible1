@@ -40,7 +40,7 @@
   user:
     name: roboshop
   register: out
-  diff_mode: full
+  check_mode: no
 
 - name: out
   debug:
