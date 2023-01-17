@@ -38,8 +38,9 @@
 
 - name: add user
   user:
-    name: roboshop 
+    name: roboshop
   register: out
+  diff_mode: no
 
 - name: out
   debug:
