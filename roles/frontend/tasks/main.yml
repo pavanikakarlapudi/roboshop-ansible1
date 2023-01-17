@@ -40,7 +40,7 @@
   ansible.builtin.shell: uptime
   register: out
   check_mode: no
-  diff_mode: full
+
 
 - name: out
   debug:
