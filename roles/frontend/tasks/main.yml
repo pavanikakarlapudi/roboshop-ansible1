@@ -31,10 +31,14 @@
 #
 #
 
-- name: Install Nginx
-  ansible.builtin.yum:
-    name: httpd
-    state: installed
+#- name: Install Nginx
+#  ansible.builtin.yum:
+#    name: httpd
+#    state: installed
+
+- name: add user
+  user:
+    name: roboshop 
   register: out
 
 - name: out
