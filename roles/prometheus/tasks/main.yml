@@ -1,0 +1,4 @@
+- name: Setup Server
+  ansible.builtin.include_tasks: "server.yml"
+  when: prometheus == "server"
+
