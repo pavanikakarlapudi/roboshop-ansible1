@@ -51,3 +51,5 @@
         - {name: "grafana.api_key", value: "eyJrIjoiUnVJRHdsMHpKaDJWRjJ3aDQxaklVbzZxUnpaQnp0TzEiLCJuIjoiY2xpIiwiaWQiOjF9" }
         - {name: "ses.user", value: "AKIAZHEF5S5CNSTWTZOL" }
         - {name: "ses.pass", value: "BNcrOH3Rp67olv9cU8iIT7t9k8h3WeWCO+8t0NA3uRKJ" }
+        - {name: "dev.ssh.user", value: "centos" }
+        - {name: "dev.ssh.pass", value: "DevOps321" }
