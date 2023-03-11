@@ -18,7 +18,8 @@
 
 - name: print out
   debug:
-    msg: "{{out.databases.citiesx }}"
+    msg: "Cities does not exist"
+  when: "'cities' not in out.databases"
 #
 #- name: Load MySQL Schema
 #  community.mysql.mysql_db:
