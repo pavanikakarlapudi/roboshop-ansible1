@@ -18,8 +18,8 @@
 
 - name: print out
   debug:
-    msg: "Cities does not exist"
-  when: "'cities' not in out.databases"
+    msg: "Cities exist"
+  when: "'cities' in out.databases"
 #
 #- name: Load MySQL Schema
 #  community.mysql.mysql_db:
