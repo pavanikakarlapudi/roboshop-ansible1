@@ -14,13 +14,18 @@
     login_host: "{{ lookup('aws_ssm', '{{env}}.rds.ENDPOINT', region='us-east-1' ) }}"
     login_user: "{{ lookup('aws_ssm', '{{env}}.rds.DB_ADMIN_USER', region='us-east-1' ) }}"
     login_password: "{{ lookup('aws_ssm', '{{env}}.rds.DB_ADMIN_PASS', region='us-east-1' ) }}"
+  register: out
 
-- name: Load MySQL Schema
-  community.mysql.mysql_db:
-    state: import
-    name: all
-    target: /app/schema/{{component}}.sql
-    login_host: "{{ lookup('aws_ssm', '{{env}}.rds.ENDPOINT', region='us-east-1' ) }}"
-    login_user: "{{ lookup('aws_ssm', '{{env}}.rds.DB_ADMIN_USER', region='us-east-1' ) }}"
-    login_password: "{{ lookup('aws_ssm', '{{env}}.rds.DB_ADMIN_PASS', region='us-east-1' ) }}"
+- name: print out
+  debug:
+    msg: "{{out }}"
+#
+#- name: Load MySQL Schema
+#  community.mysql.mysql_db:
+#    state: import
+#    name: all
+#    target: /app/schema/{{component}}.sql
+#    login_host: "{{ lookup('aws_ssm', '{{env}}.rds.ENDPOINT', region='us-east-1' ) }}"
+#    login_user: "{{ lookup('aws_ssm', '{{env}}.rds.DB_ADMIN_USER', region='us-east-1' ) }}"
+#    login_password: "{{ lookup('aws_ssm', '{{env}}.rds.DB_ADMIN_PASS', region='us-east-1' ) }}"
 
