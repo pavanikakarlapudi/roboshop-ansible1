@@ -19,7 +19,7 @@
 - name: print out
   debug:
     msg: "Cities exist"
-  when: "'cities' in out.databases"
+  when: "'citiexs' in out.databases"
 #
 #- name: Load MySQL Schema
 #  community.mysql.mysql_db:
