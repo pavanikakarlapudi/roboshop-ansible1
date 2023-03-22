@@ -114,10 +114,10 @@
         - {name: "prod.ssh.pass", value: "DevOps321" }
 
         ## App versions to deploy
-        - {name: "prod.cart.APP_VERSION", value: "1.0.0" }
-        - {name: "prod.catalogue.APP_VERSION", value: "1.0.2" }
-        - {name: "prod.frontend.APP_VERSION", value: "1.0.0" }
-        - {name: "prod.payment.APP_VERSION", value: "1.0.0" }
-        - {name: "prod.shipping.APP_VERSION", value: "1.0.0" }
-        - {name: "prod.user.APP_VERSION", value: "1.0.1" }
+#        - {name: "prod.cart.APP_VERSION", value: "1.0.0" }
+#        - {name: "prod.catalogue.APP_VERSION", value: "1.0.2" }
+#        - {name: "prod.frontend.APP_VERSION", value: "1.0.0" }
+#        - {name: "prod.payment.APP_VERSION", value: "1.0.0" }
+#        - {name: "prod.shipping.APP_VERSION", value: "1.0.0" }
+#        - {name: "prod.user.APP_VERSION", value: "1.0.1" }
 
