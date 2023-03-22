@@ -73,9 +73,12 @@
         - {name: "prod.payment.AMQP_USER", value: "roboshop" }
         - {name: "prod.shipping.CART_ENDPOINT", value: "cart-prod.devopsb70.online:80" }
         - {name: "prod.shipping.DB_HOST", value: "mysql-prod.devopsb70.online" }
-        - {name: "prod.user.MONGO", value: "true" }
-        - {name: "prod.user.MONGO_URL", value: "mongodb://mongodb-prod.devopsb70.online:27017/users" }
-        - {name: "prod.user.REDIS_HOST", value: "redis-prod.devopsb70.online" }
+        - {name: "prod.user.DOCUMENTDB", value: "true" }
+        - {name: "prod.user.DOCDB_USER", value: "admin1" }
+        - {name: "prod.user.DOCDB_PASS", value: "RoboShop123" }
+        - {name: "prod.user.MONGO_URL", value: "mongodb://admin1:RoboShop123@prod-docdb-cluster.cluster-cmscnppwjzuf.us-east-1.docdb.amazonaws.com:27017/users?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false" }
+        - {name: "prod.user.DOCDB_ENDPOINT", value: "prod-docdb-cluster.cluster-cmscnppwjzuf.us-east-1.docdb.amazonaws.com:27017" }
+        - {name: "prod.user.REDIS_HOST", value: "prod-elasticache-cluster.ppugfs.0001.use1.cache.amazonaws.com" }
         ### PASSWORDS SHOULD NEVER BE KEPT IN THESE REPOS, THOSE SHOULD BE CREATED MAUALLY, BUT FOR LAB PURPOSE IAM CREATING HERE
     - name: Create Secrets
       community.aws.aws_ssm_parameter_store:
